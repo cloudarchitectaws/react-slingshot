@@ -27,12 +27,12 @@ jobs:
       - checkout
       - run: npm audit
 workflows:
-  jobs:
-    - build
-    - test:
-        requires: 
-          - build
-    - analyze:
-        requires: 
-          - test
-    
+  my_workflow:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - analyze:
+          requires:
+            - test    
