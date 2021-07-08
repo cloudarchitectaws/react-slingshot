@@ -27,10 +27,7 @@ jobs:
       - checkout
       - run: npm audit
 workflows:
-  # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
-    jobs:
+  jobs:
       - build
       - test
           requires: 
@@ -38,3 +35,4 @@ workflows:
       - analyze
           requires: 
             - test
+    
