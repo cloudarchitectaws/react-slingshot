@@ -30,9 +30,9 @@ workflows:
   jobs:
     - build
     - test
-        requires: 
-          - build
+        requires: build
+          
     - analyze
-        requires: 
-          - test
+        requires: test
+          
     
