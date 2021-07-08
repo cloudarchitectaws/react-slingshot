@@ -28,11 +28,11 @@ jobs:
       - run: npm audit
 workflows:
   jobs:
-      - build
-      - test
-          requires: 
-            - build
-      - analyze
-          requires: 
-            - test
+    - build
+    - test
+        requires: 
+          - build
+    - analyze
+        requires: 
+          - test
     
